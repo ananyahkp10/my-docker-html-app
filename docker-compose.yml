@@ -1,15 +1,9 @@
 version: "3.8"
 
-
-services:		
-  
+services:
   web:
-	
     image: nginx:alpine
-
     ports:
-      - "9090:80"
-
+      - "9090:80"           # spaces, not tabs
     volumes:
-      - ./index.html:/usr/share/nginx/html/index.html
-	
+      - ./index.html:/usr/share/nginx/html/index.html:ro
